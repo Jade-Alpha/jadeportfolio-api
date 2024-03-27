@@ -39,7 +39,7 @@ export const patchAchievement = async(req,res) =>{
 export const deleteAchievement = async(req,res) =>{
 
     try {
-        const removeAchievement = await AchievementModel.findByIdAndDelete(req.params.id, req.body)
+        const removeAchievement = await AchievementModel.findByIdAndDelete(req.params.id)
         res.send(removeAchievement)
     } catch (error) {
         

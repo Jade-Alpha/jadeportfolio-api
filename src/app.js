@@ -12,7 +12,8 @@ const app = express();
 handleResponses(app, {});
 
 dotenv.config()
-
+app.use(express.json())
+app.use (cors())
 
 const mongoURI = process.env.MONGO_URI
 
@@ -22,14 +23,15 @@ mongoose.connect(mongoURI).then(()=>{
 }).catch((error)=> console.log(error))
 
 const PORT = process.env.PORT || 7000
-app.use (cors())
+
 
 
 app.use(router);
 
 
+
 app.listen(PORT,() =>{
-    console.log(`express app is running${PORT}`);
+    console.log(`express app is running ${PORT}`);
 
     init(
         app,
