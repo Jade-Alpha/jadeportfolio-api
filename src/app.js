@@ -16,7 +16,9 @@ mongoose.connect(mongoURI).then(()=>{
 
 const PORT = process.env.PORT || 7000
 app.use (cors())
-app.use(router)
+
+
+app.use(router);
 
 
 app.listen(PORT,() =>{
