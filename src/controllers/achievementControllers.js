@@ -7,7 +7,7 @@ export const addAchievement = async (req, res) => {
 try {
     const data = req.body
     const postAchievement = await AchievementModel.create(data)
-    res.send(postAchievement)
+    res.json(postAchievement)
 } catch (error) {
     console.log(error)
 }

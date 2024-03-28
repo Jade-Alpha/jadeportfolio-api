@@ -31,11 +31,11 @@ app.listen(8080, () => {
 
       return spec;
     },
-    "./swagger.json",
+    "/swagger.json",
     60 * 1000,
     "api-docs",
     modelNames,
-    ["users"],
+    ["Achievement", "Experience", "Posts"],
     ["development"],
     true
   );

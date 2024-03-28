@@ -5,7 +5,7 @@ import { addPost, deletePost, getPost, patchPost } from "../controllers/postsCon
 
 
 
-  const router = Router()
+ export const router = Router();
 
 router.post('/add-achievement', addAchievement)
 
@@ -36,4 +36,4 @@ router.delete('/post/:id', deletePost )
 
 
 
- export default router
+ 

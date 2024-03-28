@@ -1,17 +1,18 @@
 import  express  from "express";
-import router from "./routes/allRoutes.js";
+import {router} from "./routes/allRoutes.js";
 import mongoose from "mongoose";
 import cors from "cors"
 import { handleRequests, init, handleResponses } from "express-oas-generator";
 import dotenv from "dotenv"
 
+dotenv.config()
+
+const app = express(); 
 
 const modelNames = mongoose.modelNames();
 
-const app = express(); 
 handleResponses(app, {});
 
-dotenv.config()
 app.use(express.json())
 app.use (cors())
 
